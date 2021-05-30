@@ -36,3 +36,19 @@ function hotelCost(day){
 }
 var money = hotelCost(11);
 console.log(money);
+// megaFriend
+function megaFriend(friend){ 
+    var big = 0;
+    var names = undefined;
+    for (var i = 0; i<friend.length; i++){
+        var word = friend[i]; 
+        var length = word.length; 
+        if(big<length){
+            big = length;
+            names=word;
+        }
+    }
+    return names;
+ } 
+var bigName = megaFriend(["a","aa","aawa","e","sadi"]);
+console.log(bigName);
