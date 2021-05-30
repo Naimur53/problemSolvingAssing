@@ -1,8 +1,13 @@
 function kilometerToMeter(n){
-    var result = n*1000;
-    return result;
+    if(n>0){
+        var result = n*1000;
+        return result;
+    }
+   else{
+     return "plz enter valid number";
+   }
 }
-var converter = kilometerToMeter(1);
+var converter = kilometerToMeter(0);
 console.log(converter);
 // budgetCalculator
 function budgetCalculator(a ,b ,c){
@@ -38,17 +43,23 @@ var money = hotelCost(11);
 console.log(money);
 // megaFriend
 function megaFriend(friend){ 
-    var big = 0;
-    var names = undefined;
-    for (var i = 0; i<friend.length; i++){
-        var word = friend[i]; 
-        var length = word.length; 
-        if(big<length){
-            big = length;
-            names=word;
+    if(friend.length>=2){
+        var big = 0;
+        var names = undefined;
+        for (var i = 0; i<friend.length; i++){
+            var word = friend[i]; 
+            var length = word.length; 
+            if(big<length){
+                big = length;
+                names=word;
+            }
         }
+        return names;
     }
-    return names;
+    else{
+        return "plz enter valid array or above 1 elemant"
+    }
+    
  } 
 var bigName = megaFriend(["a","aa","aawa","e","sadi"]);
-console.log(bigName);
+console.log(bigName); 
